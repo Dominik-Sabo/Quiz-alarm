@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_alarm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="30dp"/>
+
+    <ImageView
+        android:id="@+id/ivBackArrow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:layout_margin="15dp"/>
+
+    <ImageView
+        android:id="@+id/ivDone"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_check_black_24dp"
+        android:layout_margin="15dp"
+        android:layout_alignParentRight="true"/>
+
+    <EditText
+        android:id="@+id/etAlarmName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlRepeatBox"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:hint="Alarm Name"/>
+
+
+
+    <TimePicker
+        android:id="@+id/tpTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvNew"
+        android:layout_marginTop="15dp"
+        ></TimePicker>
+
+    <RelativeLayout
+        android:id="@+id/rlRepeatBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tpTimePicker">
+
+        <TextView
+            android:id="@+id/tvRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/repeat"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/tvMonday"
+            android:layout_width="@dimen/weekday_textsize"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/weekday_margin"
+            android:layout_marginRight="@dimen/weekday_margin"
+            android:layout_below="@id/tvRepeat"
+            android:layout_toLeftOf="@id/tvTuesday"
+            android:text="M"
+            android:textSize="@dimen/weekday_textsize"
+            android:textAlignment="center"
+            android:textColor="@color/blue"/>
+
+        <TextView
+            android:id="@+id/tvTuesday"
+            android:layout_width="@dimen/weekday_textsize"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/weekday_margin"
+            android:layout_marginRight="@dimen/weekday_margin"
+            android:layout_below="@id/tvRepeat"
+            android:layout_toLeftOf="@id/tvWednesday"
+            android:text="T"
+            android:textSize="@dimen/weekday_textsize"
+            android:textAlignment="center"
+            android:textColor="@color/blue"/>
+
+        <TextView
+            android:id="@+id/tvWednesday"
+            android:layout_width="@dimen/weekday_textsize"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/weekday_margin"
+            android:layout_marginRight="@dimen/weekday_margin"
+            android:layout_below="@id/tvRepeat"
+            android:layout_toLeftOf="@id/tvThursday"
+            android:text="W"
+            android:textSize="@dimen/weekday_textsize"
+            android:textAlignment="center"
+            android:textColor="@color/blue"/>
+
+        <TextView
+            android:id="@+id/tvThursday"
+            android:layout_width="@dimen/weekday_textsize"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvRepeat"
+            android:layout_marginLeft="@dimen/weekday_margin"
+            android:layout_marginRight="@dimen/weekday_margin"
+            android:layout_marginBottom="@dimen/weekday_margin"
+            android:layout_centerHorizontal="true"
+            android:text="T"
+            android:textSize="@dimen/weekday_textsize"
+            android:textAlignment="center"
+            android:textColor="@color/blue"/>
+
+        <TextView
+            android:id="@+id/tvFriday"
+            android:layout_width="@dimen/weekday_textsize"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/weekday_margin"
+            android:layout_marginRight="@dimen/weekday_margin"
+            android:layout_below="@id/tvRepeat"
+            android:layout_toRightOf="@id/tvThursday"
+            android:text="F"
+            android:textSize="@dimen/weekday_textsize"
+            android:textAlignment="center"
+            android:textColor="@color/blue"/>
+
+        <TextView
+            android:id="@+id/tvSaturday"
+            android:layout_width="@dimen/weekday_textsize"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/weekday_margin"
+            android:layout_marginRight="@dimen/weekday_margin"
+            android:layout_below="@id/tvRepeat"
+            android:layout_toRightOf="@id/tvFriday"
+            android:text="S"
+            android:textSize="@dimen/weekday_textsize"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tvSunday"
+            android:layout_width="@dimen/weekday_textsize"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/weekday_margin"
+            android:layout_marginRight="@dimen/weekday_margin"
+            android:layout_below="@id/tvRepeat"
+            android:layout_toRightOf="@id/tvSaturday"
+            android:text="S"
+            android:textSize="@dimen/weekday_textsize"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvRingtone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etAlarmName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/ringtone"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/ivChevron"
+        android:src="@drawable/ic_chevron_right_black_24dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/etAlarmName"/>
+
+    <TextView
+        android:id="@+id/tvRingtoneName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etAlarmName"
+        android:layout_toLeftOf="@+id/ivChevron"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="12dp"
+        android:textSize="18dp"
+        android:text="@string/aegean_sea"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/tvQuizTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRingtone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/quiz_theme"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/ivChevron2"
+        android:src="@drawable/ic_chevron_right_black_24dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ivChevron"/>
+
+    <TextView
+        android:id="@+id/tvQuizThemeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRingtone"
+        android:layout_toLeftOf="@id/ivChevron2"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:text="@string/all"/>
+
+    <TextView
+        android:id="@+id/tvQuizDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvQuizTheme"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/quiz_difficulty"
+        android:textSize="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvQuizDifficulty">
+
+
+        <RadioButton
+            android:id="@+id/rbEasy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/easy"/>
+
+        <RadioButton
+            android:id="@+id/rbMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/medium"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rbHard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/hard"/>
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvQuizTheme"
+        android:layout_marginLeft="200dp">
+
+        <TextView
+            android:id="@+id/tvAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all"
+            android:layout_centerHorizontal="true"
+            android:textSize="15dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvAnimals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/animals"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvAll"
+            android:textSize="15dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/music"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvAnimals"
+            android:textSize="15dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvPopCulture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pop_culture"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvMusic"
+            android:textSize="15dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvPopCulture"
+            android:textSize="15dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvAnime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anime"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvHistory"
+            android:textSize="15dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/delete"
+        android:layout_margin="20dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

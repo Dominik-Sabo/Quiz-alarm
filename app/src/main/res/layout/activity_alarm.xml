@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlarmActivity">
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/weekday_textsize"
+        android:layout_marginLeft="@dimen/weekday_textsize"
+        android:layout_marginTop="30dp"
+        android:text="question"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btnAnswer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/weekday_textsize"
+        android:layout_marginRight="@dimen/weekday_textsize"
+        android:layout_marginTop="175dp"
+        android:textAllCaps="false"
+        android:text="1"/>
+
+    <Button
+        android:id="@+id/btnAnswer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAnswer1"
+        android:layout_marginLeft="@dimen/weekday_textsize"
+        android:layout_marginRight="@dimen/weekday_textsize"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:text="2"/>
+
+    <Button
+        android:id="@+id/btnAnswer3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAnswer2"
+        android:layout_marginLeft="@dimen/weekday_textsize"
+        android:layout_marginRight="@dimen/weekday_textsize"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:text="3"/>
+
+    <Button
+        android:id="@+id/btnAnswer4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAnswer3"
+        android:layout_marginLeft="@dimen/weekday_textsize"
+        android:layout_marginRight="@dimen/weekday_textsize"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:text="4"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnAnswer5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAnswer4"
+        android:layout_marginLeft="@dimen/weekday_textsize"
+        android:layout_marginRight="@dimen/weekday_textsize"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:text="5"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="@dimen/weekday_textsize"
+        android:text="Score:"/>
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/Score"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        android:textSize="@dimen/weekday_textsize"/>
+
+</RelativeLayout>
