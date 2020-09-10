@@ -29,7 +29,7 @@
         android:id="@+id/tvTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="what the ass"
+        android:text=""
         android:layout_below="@id/tvName"
         android:layout_marginLeft="15dp"
         android:layout_toRightOf="@id/tvTime" />
